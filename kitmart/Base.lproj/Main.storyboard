@@ -36,6 +36,9 @@
                                 <state key="normal" title="Prueba">
                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="CeN-bb-QqH" kind="presentation" identifier="pruebaInspiracion" id="ywO-R9-TZs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -1275,9 +1278,86 @@
             </objects>
             <point key="canvasLocation" x="733" y="648"/>
         </scene>
+        <!--Inspiracion View Controller-->
+        <scene sceneID="b8f-3v-aQt">
+            <objects>
+                <viewController id="CeN-bb-QqH" customClass="InspiracionViewController" customModule="kitmart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DrJ-8u-taX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xa3-V5-czB">
+                                <rect key="frame" x="0.0" y="17" width="414" height="808"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="09g-xV-sk9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="214" id="Uxf-cV-HFe" customClass="InspiracionTableViewCell" customModule="kitmart" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="214"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uxf-cV-HFe" id="bVo-HN-KVM" customClass="InspiracionCelda" customModule="kitmart" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knB-8Z-WRZ">
+                                                            <rect key="frame" x="185" y="166" width="44.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imagen" image="ico.png" translatesAutoresizingMaskIntoConstraints="NO" id="vgZ-YF-VmV">
+                                                            <rect key="frame" x="19.5" y="20" width="375" height="128"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="375" id="SEu-YD-Uen"/>
+                                                                <constraint firstAttribute="height" constant="128" id="oeU-BQ-ggy"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="knB-8Z-WRZ" firstAttribute="centerX" secondItem="bVo-HN-KVM" secondAttribute="centerX" id="1d6-ey-PPM"/>
+                                                        <constraint firstItem="knB-8Z-WRZ" firstAttribute="top" secondItem="vgZ-YF-VmV" secondAttribute="bottom" constant="18" id="49S-SH-hb2"/>
+                                                        <constraint firstItem="vgZ-YF-VmV" firstAttribute="top" secondItem="bVo-HN-KVM" secondAttribute="top" constant="20" id="UWj-si-SjA"/>
+                                                        <constraint firstItem="vgZ-YF-VmV" firstAttribute="centerX" secondItem="bVo-HN-KVM" secondAttribute="centerX" id="wII-Z7-xZj"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.56856346130000002" green="0.56866437199999997" blue="0.56855708360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <outlet property="nombreCelda" destination="knB-8Z-WRZ" id="JK3-Aj-D3V"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="09g-xV-sk9" firstAttribute="height" secondItem="Xa3-V5-czB" secondAttribute="height" id="Pvk-TN-QfF"/>
+                                    <constraint firstItem="09g-xV-sk9" firstAttribute="width" secondItem="Xa3-V5-czB" secondAttribute="width" id="bMz-kZ-nSI"/>
+                                    <constraint firstItem="09g-xV-sk9" firstAttribute="centerX" secondItem="Xa3-V5-czB" secondAttribute="centerX" id="hMT-fy-RUV"/>
+                                    <constraint firstItem="09g-xV-sk9" firstAttribute="centerY" secondItem="Xa3-V5-czB" secondAttribute="centerY" id="hfI-0h-wYW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iW6-vT-LCu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xa3-V5-czB" firstAttribute="width" secondItem="iW6-vT-LCu" secondAttribute="width" id="e4a-67-6KO"/>
+                            <constraint firstItem="Xa3-V5-czB" firstAttribute="height" secondItem="iW6-vT-LCu" secondAttribute="height" id="fzK-OD-ge3"/>
+                            <constraint firstItem="Xa3-V5-czB" firstAttribute="centerX" secondItem="DrJ-8u-taX" secondAttribute="centerX" id="iKd-n9-pw3"/>
+                            <constraint firstItem="Xa3-V5-czB" firstAttribute="centerY" secondItem="DrJ-8u-taX" secondAttribute="centerY" id="rXO-FR-7NM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="09g-xV-sk9" id="sQY-aB-6Xz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3D4-Ux-2Iz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1430.4347826086957" y="-824.33035714285711"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lWm-h2-8Uy"/>
+        <segue reference="YCV-6J-Jec"/>
         <segue reference="MLk-bC-jQg"/>
         <segue reference="72c-aD-U7T"/>
     </inferredMetricsTieBreakers>
@@ -1293,6 +1373,7 @@
         <image name="WhatsApp Image 2021-03-22 at 2.37.58 PM.jpeg" width="521" height="962"/>
         <image name="estufa-de-gas.png" width="384" height="384"/>
         <image name="ico-principalOpaco.png" width="442" height="399"/>
+        <image name="ico.png" width="283" height="286"/>
         <image name="icos-control.png" width="300" height="300"/>
         <image name="imag-informa.jpg" width="1000" height="560"/>
         <image name="image-recetas.jpg" width="800" height="445"/>
