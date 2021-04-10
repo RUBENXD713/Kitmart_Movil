@@ -2,9 +2,12 @@
 # platform :ios, '9.0'
 
 target 'kitmart' do
+  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Alamofire'
+  # Pods for kitmart
+
+pod 'Alamofire'
 
   target 'kitmartTests' do
     inherit! :search_paths

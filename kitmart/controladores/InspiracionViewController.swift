@@ -8,9 +8,9 @@
 import UIKit
 import Alamofire
 
-class InspiracionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class InspiracionViewController: UIViewController//, UITableViewDelegate, UITableViewDataSource
 {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   /* func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         <#code#>
     }
     
@@ -22,7 +22,9 @@ class InspiracionViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     var jsonArray: NSArray?
     var nombreArray: Array<String> =  []
-    var imagenURLArray: Array<String> =  []
+    var ingredientesArray: Array<String> = []
+    var procedimientoArray: Array<String> = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +37,7 @@ class InspiracionViewController: UIViewController, UITableViewDelegate, UITableV
     
     func downloadDataFromApi(){
         //1.
-           AF.request("http://private-5d2b9-efectoapplepokemonapp.apiary-mock.com/pokemonList") .responseJSON { response in
+           AF.request("https://test-es.edamam.com/search?q=chicken&app_id=5cf4635d&app_key=ee7dc9acb37f13136478a1683b31cc00") .responseJSON { response in
               //2.
             if let JSON = response.value{
                  //3.
@@ -43,13 +45,15 @@ class InspiracionViewController: UIViewController, UITableViewDelegate, UITableV
                  //4.
                  for item in self.jsonArray! as! [NSDictionary]{
                     //5.
-                    let name = item["name"] as? String
-                    let imageURL = item["image"] as? String
+                    let name = item["label"] as? String
                     self.nombreArray.append((name)!)
-                    self.imagenURLArray.append((imageURL)!)
-                 }
-                 //6.
-                 self.tableView.reloadData()
+                    let ingre = item["ingredientLines"]as? String
+                    self.ingredientesArray.append((ingre)!)
+                    let proc = item["url"]as? String
+                    self.procedimientoArray.append((proc)!)
+                    
+                    
+                    self.tableView.reloadData()
          
               }
         
@@ -60,10 +64,11 @@ class InspiracionViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let celda = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! InspiracionTableViewCell
+        let celda = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Inspiracion
         
         celda.nombreCelda.text = self.nombreArray [indexPath.row]
-        
+        celda.ingredienteCelda.text = self.ingredientesArray [indexPath.row]
+        celda.infoCelda.text = self.procedimientoArray[indexPath.row]
         //let url = URL(string: self.imagenURLArray[indexPath.row])
         //celda.imagenCelda.
         return celda
@@ -77,4 +82,5 @@ class InspiracionViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
     }
+}*/
 }
