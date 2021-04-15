@@ -1,0 +1,6 @@
+framework module Pods_kitmart {
+  umbrella header "Pods-kitmart-umbrella.h"
+
+  export *
+  module * { export * }
+}
