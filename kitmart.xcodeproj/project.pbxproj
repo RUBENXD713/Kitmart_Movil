@@ -12,6 +12,10 @@
 		AB084387261E361400B60DBA /* Inspiracion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB084386261E361400B60DBA /* Inspiracion.swift */; };
 		AB08438C261E374A00B60DBA /* InspiracionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08438B261E374A00B60DBA /* InspiracionViewController.swift */; };
 		AB0C6B9E2627AF89008F80F5 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C6B9D2627AF89008F80F5 /* QRScannerViewController.swift */; };
+		AB0C6BB12627D0F1008F80F5 /* RecetasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C6BB02627D0F1008F80F5 /* RecetasViewController.swift */; };
+		AB0C6BC42627D1D6008F80F5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C6BC32627D1D6008F80F5 /* Item.swift */; };
+		AB0C6BCC2627D2BC008F80F5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C6BCB2627D2BC008F80F5 /* Post.swift */; };
+		AB0C6BD22627D406008F80F5 /* IPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C6BD12627D406008F80F5 /* IPost.swift */; };
 		AB34E8912626AC3D000FD566 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34E8902626AC3D000FD566 /* SideMenu.swift */; };
 		AB34E8972626ACDF000FD566 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34E8962626ACDF000FD566 /* SettingsViewController.swift */; };
 		AB34E8A12626B28E000FD566 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34E8A02626B28E000FD566 /* InfoViewController.swift */; };
@@ -89,6 +93,10 @@
 		AB084386261E361400B60DBA /* Inspiracion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspiracion.swift; sourceTree = "<group>"; };
 		AB08438B261E374A00B60DBA /* InspiracionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspiracionViewController.swift; sourceTree = "<group>"; };
 		AB0C6B9D2627AF89008F80F5 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		AB0C6BB02627D0F1008F80F5 /* RecetasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasViewController.swift; sourceTree = "<group>"; };
+		AB0C6BC32627D1D6008F80F5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		AB0C6BCB2627D2BC008F80F5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		AB0C6BD12627D406008F80F5 /* IPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPost.swift; sourceTree = "<group>"; };
 		AB34E8902626AC3D000FD566 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		AB34E8962626ACDF000FD566 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AB34E8A02626B28E000FD566 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +191,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AB0C6BD02627D3B6008F80F5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AB0C6BD12627D406008F80F5 /* IPost.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		AB34E89B2626ACE7000FD566 /* MenuHamburguesa */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +229,7 @@
 				ABEFC9162621107D008AF18A /* AgregarRecetaViewController.swift */,
 				AB5F7D6B262733C000C45C0C /* PendientesViewController.swift */,
 				AB0C6B9D2627AF89008F80F5 /* QRScannerViewController.swift */,
+				AB0C6BB02627D0F1008F80F5 /* RecetasViewController.swift */,
 			);
 			path = controladores;
 			sourceTree = "<group>";
@@ -242,6 +259,7 @@
 		ABEAAD4726093F76002D82F9 /* kitmart */ = {
 			isa = PBXGroup;
 			children = (
+				AB0C6BD02627D3B6008F80F5 /* Protocols */,
 				ABEAAD7B26093FAB002D82F9 /* Recursos */,
 				ABEAAD4826093F76002D82F9 /* AppDelegate.swift */,
 				ABE4B885260BC44E0006D23C /* clases */,
@@ -338,6 +356,8 @@
 			children = (
 				ABEFC8FF261EB193008AF18A /* App_User.swift */,
 				ABEFC907261EB203008AF18A /* User.swift */,
+				AB0C6BC32627D1D6008F80F5 /* Item.swift */,
+				AB0C6BCB2627D2BC008F80F5 /* Post.swift */,
 			);
 			path = Objetos;
 			sourceTree = "<group>";
@@ -623,6 +643,7 @@
 				ABEFC8FA261EA235008AF18A /* Extenciones.swift in Sources */,
 				ABEAAD4D26093F76002D82F9 /* ViewController.swift in Sources */,
 				AB34E8912626AC3D000FD566 /* SideMenu.swift in Sources */,
+				AB0C6BC42627D1D6008F80F5 /* Item.swift in Sources */,
 				ABEFC8ED261E9F6E008AF18A /* RegistrarUsuarioViewController.swift in Sources */,
 				ABEFC9172621107D008AF18A /* AgregarRecetaViewController.swift in Sources */,
 				ABEFC9122620E2C7008AF18A /* AgregarPendientesViewController.swift in Sources */,
@@ -630,12 +651,15 @@
 				AB34E8972626ACDF000FD566 /* SettingsViewController.swift in Sources */,
 				AB41CAA726260594006BB919 /* MenuViewController.swift in Sources */,
 				ABEAAD4926093F76002D82F9 /* AppDelegate.swift in Sources */,
+				AB0C6BCC2627D2BC008F80F5 /* Post.swift in Sources */,
 				ABEFC908261EB203008AF18A /* User.swift in Sources */,
 				AB5F7D6C262733C000C45C0C /* PendientesViewController.swift in Sources */,
+				AB0C6BD22627D406008F80F5 /* IPost.swift in Sources */,
 				ABEAAD4B26093F76002D82F9 /* SceneDelegate.swift in Sources */,
 				AB0C6B9E2627AF89008F80F5 /* QRScannerViewController.swift in Sources */,
 				AB08438C261E374A00B60DBA /* InspiracionViewController.swift in Sources */,
 				AB34E8A12626B28E000FD566 /* InfoViewController.swift in Sources */,
+				AB0C6BB12627D0F1008F80F5 /* RecetasViewController.swift in Sources */,
 				AB084387261E361400B60DBA /* Inspiracion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -38,7 +38,7 @@ class AgregarRecetaViewController: UIViewController {
             lbNombre.text! = ""
             lbIngredientes.text! = ""
             lbDescripcion.text! = ""
-            self.performSegue(withIdentifier: "recetas", sender: nil)
+            self.performSegue(withIdentifier: "recetasHome", sender: nil)
             
         }
          else{ alertDefault(with: "Error!!", andWith: "Todos los campos deben estar llenos")
