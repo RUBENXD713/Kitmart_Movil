@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.4.2)
+  - SideMenu (6.5.0)
+  - Starscream (4.0.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - SideMenu
+  - Starscream
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SideMenu
+    - Starscream
+
+SPEC CHECKSUMS:
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+
+PODFILE CHECKSUM: 1293ed1c9db03d0fa2405785ce6c6cdce5ae56be
+
+COCOAPODS: 1.10.1
