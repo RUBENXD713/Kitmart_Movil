@@ -45,21 +45,21 @@ class loginViewController: UIViewController {
             AF.request("\(self.defaults.object(forKey: "url") ?? "")login"
 , method: .post,parameters: parametros,headers: headers).responseDecodable(of: User.self){ (response) in
                     
-                guard let user = response.value else { return }
-                print(user.token)
-                self.defaults.set(user.token, forKey: "token")
-                self.defaults.synchronize()
-                    
-                if let user = self.defaults.string(forKey: "token"){
-                        //print(self.defaults.string(forKey: "token"))
-                        self.performSegue(withIdentifier: "home", sender: nil)
-                    }
-                else{
+                if response.value == nil {
                     self.alertDefault(with: "Error!!", andWith: "La contraseña o el correo es incorrecto")
                     self.btnIngresar.shake()
                     self.tfCorreo.shake()
                     self.txcontrasena.shake()
                 }
+                guard let user = response.value else { return }
+                print(user.token)
+                self.defaults.set(user.token, forKey: "token")
+                self.defaults.synchronize()
+                if let user = self.defaults.string(forKey: "token"){
+                        //print(self.defaults.string(forKey: "token"))
+                        self.performSegue(withIdentifier: "home", sender: nil)
+                    }
+                    
             }
         }
             else{

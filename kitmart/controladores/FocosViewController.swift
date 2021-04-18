@@ -61,11 +61,15 @@ class FocosViewController: UIViewController, WebSocketDelegate {
         let url = "\(defaults.object(forKey: "url")!)sensores/E"
         print(url)
         AF.request(url, method: .get,headers: self.headers).responseDecodable(of: [leds].self){ [self] (response) in
-            self.ledsArray = response.value!
-            print(self.ledsArray.first ?? [Pendiente]())
-            self.lblF1.text = self.ledsArray[0].nombre
-            self.lblF2.text = self.ledsArray[1].nombre
-            self.lblF3.text = self.ledsArray[2].nombre
+            if response.value != nil
+            {
+                self.ledsArray = response.value!
+                print(self.ledsArray.first ?? [Pendiente]())
+                self.lblF1.text = self.ledsArray[0].nombre
+                self.lblF2.text = self.ledsArray[1].nombre
+                self.lblF3.text = self.ledsArray[2].nombre
+            }
+            
         }
         
         wsconnect()
@@ -123,7 +127,7 @@ class FocosViewController: UIViewController, WebSocketDelegate {
     
     
     func wsconnect(){
-        var request = URLRequest(url: URL(string: "ws://127.0.0.1:3333/adonis-ws")!)
+        var request = URLRequest(url: URL(string: "\(String(describing: defaults.object(forKey: "WS") ?? ""))")!)
         request.timeoutInterval = 5
         socket = WebSocket(request: request)
         socket.delegate = self

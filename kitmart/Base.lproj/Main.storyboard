@@ -239,7 +239,6 @@
                                 </state>
                                 <connections>
                                     <action selector="RegistrarUsuario:" destination="Kj3-K3-NzL" eventType="touchUpInside" id="2tu-Ea-x36"/>
-                                    <segue destination="HNo-fm-UmH" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="dhj-al-wCh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -294,11 +293,12 @@
                         <outlet property="lbConstrasena1" destination="pGs-g9-4W3" id="U6v-vX-ZeQ"/>
                         <outlet property="lbContrasena2" destination="fu3-JJ-Z7y" id="zZe-DN-wgT"/>
                         <outlet property="lbCorreoE" destination="Fhr-lm-NfV" id="kbs-g1-nES"/>
+                        <segue destination="HNo-fm-UmH" kind="showDetail" identifier="registro-login" id="k9B-V7-i7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HoI-5D-nog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="292" y="-800"/>
+            <point key="canvasLocation" x="290" y="-802"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HCh-JL-nN0">
@@ -1559,7 +1559,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHc-e4-f1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1187" y="1399"/>
+            <point key="canvasLocation" x="-1359" y="1338"/>
         </scene>
         <!--Inspiracion View Controller-->
         <scene sceneID="ye0-DS-84x">
@@ -1894,10 +1894,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="qXc-Ba-G9G"/>
-        <segue reference="BGi-lx-lee"/>
-        <segue reference="Mqb-tf-Uba"/>
-        <segue reference="u87-iW-ZNZ"/>
-        <segue reference="44g-uL-XTs"/>
+        <segue reference="Xiy-0L-IIg"/>
+        <segue reference="qKe-Ef-dCR"/>
+        <segue reference="Deq-tN-qJo"/>
+        <segue reference="k9B-V7-i7U"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ICO-chef.png" width="383" height="354"/>

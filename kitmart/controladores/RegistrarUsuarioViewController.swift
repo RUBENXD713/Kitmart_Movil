@@ -8,6 +8,15 @@
 import UIKit
 import Alamofire
 
+struct registrarUser:Decodable {
+    let _id:String
+    let email:String
+    let password:String
+    let created_at:String
+    let updated_at:String
+    
+}
+
 class RegistrarUsuarioViewController: UIViewController {
 
     
@@ -16,6 +25,7 @@ class RegistrarUsuarioViewController: UIViewController {
     @IBOutlet weak var lbContrasena2: UITextField!
     @IBOutlet weak var btnRegistrar: UIButton!
     
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +43,14 @@ class RegistrarUsuarioViewController: UIViewController {
         if lbCorreoE.text! != "" && lbConstrasena1.text! != "" && lbContrasena2.text! != "" {
             if lbConstrasena1.text! == lbContrasena2.text! {
                 let parametros = ["email": lbCorreoE.text!,"password": lbConstrasena1.text!]
-                AF.request("http://192.168.1.77:3333/api/users", method: .post,parameters: parametros, encoding: URLEncoding.default,headers: headers).responseJSON{
-                    response in
-                    let JSON = response.result
-                    
-                    print(JSON)
+                AF.request("\(self.defaults.object(forKey: "url") ?? "")users", method: .post,parameters: parametros,headers: headers).responseDecodable(of: registrarUser.self){ (response) in
+                    guard let registroExitoso = response.value else {
+                        self.lbContrasena2.shake()
+                        self.lbConstrasena1.shake()
+                        self.lbCorreoE.shake()
+                        self.alertDefault(with: "Error!!", andWith: "El correo no cumple con las caracteristicas de un email, utiliza solo minusculas,numeros,caracteres @ minusculas,numeros,caracteres")
+                        return}
+                    self.performSegue(withIdentifier: "registro-login", sender: nil)
                 }
             }
             else{

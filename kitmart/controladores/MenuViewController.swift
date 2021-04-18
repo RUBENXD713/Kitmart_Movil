@@ -35,6 +35,7 @@ class MenuViewController: UIViewController, WebSocketDelegate{
     
     let url = "\(UserDefaults.standard.object(forKey: "url")!)temperatura"
     
+    //life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +43,28 @@ class MenuViewController: UIViewController, WebSocketDelegate{
         event("temperatura", data: "actualizar_temperatura_IOS")
         
     }
+    
+    override func viewWillAppear(_ animated: Bool){
+        super.viewDidLoad()
+        wsconnect()
+        //event("temperatura", data: "actualizar_temperatura_IOS")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidLoad()
+        event("temperatura", data: "actualizar_temperatura_IOS")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool){
+        super.viewDidLoad()
+        wsdisconnect()
+    }
+    
+    //life cycle
     
     func recuperarTemperatura(){
         AF.request(url, method: .get,headers: headers).responseDecodable(of: [registroFinalSensor].self){ (response) in
@@ -51,13 +74,9 @@ class MenuViewController: UIViewController, WebSocketDelegate{
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        wsdisconnect()
-    }
-    
     
     func wsconnect(){
-        var request = URLRequest(url: URL(string: "ws://127.0.0.1:3333/adonis-ws")!)
+        var request = URLRequest(url: URL(string: "\(String(describing: defaults.object(forKey: "WS") ?? ""))")!)
         request.timeoutInterval = 5
         socket = WebSocket(request: request)
         socket.delegate = self
