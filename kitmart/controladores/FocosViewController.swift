@@ -14,7 +14,7 @@ struct leds:Decodable {
     let nombre: String
     let descripcion: String
     let tipo: String
-    let pinIn: String
+    let pinIn: String?
     let pinOut: String
     let estado: String
     let created_at: String
@@ -51,12 +51,12 @@ class FocosViewController: UIViewController, WebSocketDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        f1Apagar.round()
-        f1Encender.round()
-        f2Apagar.round()
-        f2Encender.round()
-        f3Apagar.round()
-        f3Encender.round()
+        f1Apagar.circular()
+        f1Encender.circular()
+        f2Apagar.circular()
+        f2Encender.circular()
+        f3Apagar.circular()
+        f3Encender.circular()
         
         let url = "\(defaults.object(forKey: "url")!)sensores/E"
         print(url)
@@ -77,21 +77,21 @@ class FocosViewController: UIViewController, WebSocketDelegate {
     }
     
     @IBAction func funcionApagar1(_ sender: Any) {
-        AF.request("\(defaults.object(forKey: "url")!)leds/\(self.ledsArray[0]._id)/\(Int(0))", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
+        AF.request("\(defaults.object(forKey: "url")!)estado/\(self.ledsArray[0]._id)/0", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
             print("APAGADO")
             self.event("led", data: "Led1Apagado")
         }
     }
     
     @IBAction func funcionApagar2(_ sender: Any) {
-        AF.request("\(defaults.object(forKey: "url")!)leds/\(self.ledsArray[1]._id)/\(Int(0))", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
+        AF.request("\(defaults.object(forKey: "url")!)estado/\(self.ledsArray[1]._id)/0", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
             print("APAGADO")
             self.event("led", data: "Led2Apagado")
         }
     }
     
     @IBAction func funcionApagar3(_ sender: Any) {
-        AF.request("\(defaults.object(forKey: "url")!)leds/\(self.ledsArray[2]._id)/\(Int(0))", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
+        AF.request("\(defaults.object(forKey: "url")!)estado/\(self.ledsArray[2]._id)/0", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
             print("APAGADO")
             self.event("led", data: "Led3Apagado")
         }
@@ -99,21 +99,21 @@ class FocosViewController: UIViewController, WebSocketDelegate {
     
     
     @IBAction func funcionEncender1(_ sender: Any) {
-        AF.request("\(defaults.object(forKey: "url")!)leds/\(self.ledsArray[0]._id)/\(Int(1))", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
+        AF.request("\(defaults.object(forKey: "url")!)estado/\(self.ledsArray[0]._id)/1", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
             print("ENCENDIDO")
             self.event("led", data: "Led1Encendido")
         }
     }
     
     @IBAction func funcionEncender2(_ sender: Any) {
-        AF.request("\(defaults.object(forKey: "url")!)leds/\(self.ledsArray[1]._id)/\(Int(1))", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
+        AF.request("\(defaults.object(forKey: "url")!)estado/\(self.ledsArray[1]._id)/1", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
             print("ENCENDIDO")
             self.event("led", data: "Led2Encendido")
         }
     }
     
     @IBAction func funcionEncender3(_ sender: Any) {
-        AF.request("\(defaults.object(forKey: "url")!)leds/\(self.ledsArray[2]._id)/\(Int(1))", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
+        AF.request("\(defaults.object(forKey: "url")!)estado/\(self.ledsArray[2]._id)/1", method: .put,headers: self.headers).responseDecodable(of: leds.self){ (response) in
             print("ENCENDIDO")
             self.event("led", data: "Led3Encendido")
         }

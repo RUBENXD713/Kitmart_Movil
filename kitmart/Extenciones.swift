@@ -11,6 +11,12 @@ extension UIView {
     func round() {
         self.layer.cornerRadius = self.bounds.height / 2
     }
+    func circular() {
+        self.layer.cornerRadius = self.bounds.height / 5
+    }
+    func roundSuave() {
+        self.layer.cornerRadius = self.bounds.height / 50
+    }
     
     func shake(){
             self.transform = CGAffineTransform(translationX: 25, y: 0)

@@ -16,6 +16,10 @@
 		AB0C6BC42627D1D6008F80F5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C6BC32627D1D6008F80F5 /* Item.swift */; };
 		AB0C6BCC2627D2BC008F80F5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C6BCB2627D2BC008F80F5 /* Post.swift */; };
 		AB0C6BD22627D406008F80F5 /* IPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C6BD12627D406008F80F5 /* IPost.swift */; };
+		AB303A3A262DE6B9009DDBA9 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = AB303A39262DE6B9009DDBA9 /* user.png */; };
+		AB303A3F262DEAA3009DDBA9 /* logoz.png in Resources */ = {isa = PBXBuildFile; fileRef = AB303A3E262DEAA3009DDBA9 /* logoz.png */; };
+		AB303A44262DF294009DDBA9 /* inspiración.png in Resources */ = {isa = PBXBuildFile; fileRef = AB303A43262DF293009DDBA9 /* inspiración.png */; };
+		AB303A49262DF2CD009DDBA9 /* recetas.png in Resources */ = {isa = PBXBuildFile; fileRef = AB303A48262DF2CC009DDBA9 /* recetas.png */; };
 		AB352B97262909940009F795 /* DatosUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB352B96262909940009F795 /* DatosUsuarioViewController.swift */; };
 		AB352BA4262942DF0009F795 /* EstadoRefrijeradorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB352BA3262942DF0009F795 /* EstadoRefrijeradorViewController.swift */; };
 		AB352BC02629FCC70009F795 /* FocosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB352BBF2629FCC70009F795 /* FocosViewController.swift */; };
@@ -26,6 +30,8 @@
 		AB352BEF262A8C090009F795 /* LogoEquipo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AB352BED262A8C090009F795 /* LogoEquipo.jpeg */; };
 		AB352BF0262A8C090009F795 /* logoApp.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AB352BEE262A8C090009F795 /* logoApp.jpeg */; };
 		AB5F7D6C262733C000C45C0C /* PendientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5F7D6B262733C000C45C0C /* PendientesViewController.swift */; };
+		AB65B329263376ED00061175 /* Inspiracion.png in Resources */ = {isa = PBXBuildFile; fileRef = AB65B327263376EC00061175 /* Inspiracion.png */; };
+		AB65B32A263376ED00061175 /* misRecetas.png in Resources */ = {isa = PBXBuildFile; fileRef = AB65B328263376ED00061175 /* misRecetas.png */; };
 		AB7F6273260A9D1E00569A9D /* imag-informa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7F6271260A9D1E00569A9D /* imag-informa.jpg */; };
 		AB7F6274260A9D1E00569A9D /* image-recetas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7F6272260A9D1E00569A9D /* image-recetas.jpg */; };
 		AB84E9282628B50F00CCEA0A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB84E9272628B50F00CCEA0A /* MenuViewController.swift */; };
@@ -103,6 +109,10 @@
 		AB0C6BC32627D1D6008F80F5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AB0C6BCB2627D2BC008F80F5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AB0C6BD12627D406008F80F5 /* IPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPost.swift; sourceTree = "<group>"; };
+		AB303A39262DE6B9009DDBA9 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		AB303A3E262DEAA3009DDBA9 /* logoz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoz.png; sourceTree = "<group>"; };
+		AB303A43262DF293009DDBA9 /* inspiración.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inspiración.png"; sourceTree = "<group>"; };
+		AB303A48262DF2CC009DDBA9 /* recetas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recetas.png; sourceTree = "<group>"; };
 		AB352B96262909940009F795 /* DatosUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosUsuarioViewController.swift; sourceTree = "<group>"; };
 		AB352BA3262942DF0009F795 /* EstadoRefrijeradorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadoRefrijeradorViewController.swift; sourceTree = "<group>"; };
 		AB352BBF2629FCC70009F795 /* FocosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocosViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +123,8 @@
 		AB352BED262A8C090009F795 /* LogoEquipo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LogoEquipo.jpeg; sourceTree = "<group>"; };
 		AB352BEE262A8C090009F795 /* logoApp.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoApp.jpeg; sourceTree = "<group>"; };
 		AB5F7D6B262733C000C45C0C /* PendientesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendientesViewController.swift; sourceTree = "<group>"; };
+		AB65B327263376EC00061175 /* Inspiracion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Inspiracion.png; sourceTree = "<group>"; };
+		AB65B328263376ED00061175 /* misRecetas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = misRecetas.png; sourceTree = "<group>"; };
 		AB7F6271260A9D1E00569A9D /* imag-informa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "imag-informa.jpg"; sourceTree = "<group>"; };
 		AB7F6272260A9D1E00569A9D /* image-recetas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-recetas.jpg"; sourceTree = "<group>"; };
 		AB84E9272628B50F00CCEA0A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +317,12 @@
 		ABEAAD7B26093FAB002D82F9 /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
+				AB303A48262DF2CC009DDBA9 /* recetas.png */,
+				AB303A43262DF293009DDBA9 /* inspiración.png */,
+				AB65B327263376EC00061175 /* Inspiracion.png */,
+				AB65B328263376ED00061175 /* misRecetas.png */,
+				AB303A3E262DEAA3009DDBA9 /* logoz.png */,
+				AB303A39262DE6B9009DDBA9 /* user.png */,
 				AB352BEE262A8C090009F795 /* logoApp.jpeg */,
 				AB352BED262A8C090009F795 /* LogoEquipo.jpeg */,
 				ABEAADB426094EBF002D82F9 /* WhatsApp Image 2021-03-22 at 2.37.58 PM.jpeg */,
@@ -494,9 +512,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABEAAD8A26094059002D82F9 /* icos-control.png in Resources */,
+				AB303A49262DF2CD009DDBA9 /* recetas.png in Resources */,
 				AB7F6274260A9D1E00569A9D /* image-recetas.jpg in Resources */,
 				ABEAADAE26094092002D82F9 /* icos-plant.png in Resources */,
 				AB352BF0262A8C090009F795 /* logoApp.jpeg in Resources */,
+				AB65B32A263376ED00061175 /* misRecetas.png in Resources */,
 				ABEAAD9026094059002D82F9 /* ICO-iluminacion.png in Resources */,
 				ABEAADBA26095412002D82F9 /* ico-principalOpaco.png in Resources */,
 				ABEAADA126094079002D82F9 /* tejido-que-absorbe-la-humedad.png in Resources */,
@@ -505,7 +525,9 @@
 				ABEAAD8D26094059002D82F9 /* ICO-controlEspacios.png in Resources */,
 				ABEAADA226094079002D82F9 /* plaga.png in Resources */,
 				ABEAADA326094079002D82F9 /* ICO-splash.png in Resources */,
+				AB65B329263376ED00061175 /* Inspiracion.png in Resources */,
 				ABEAAD9F26094079002D82F9 /* ICO-principal1.png in Resources */,
+				AB303A3F262DEAA3009DDBA9 /* logoz.png in Resources */,
 				ABEAAD9E26094079002D82F9 /* estufa-de-gas.png in Resources */,
 				ABEAADA026094079002D82F9 /* ICO-pie1.png in Resources */,
 				ABEAAD5226093F7A002D82F9 /* Assets.xcassets in Resources */,
@@ -515,10 +537,12 @@
 				ABEAAD5026093F76002D82F9 /* Main.storyboard in Resources */,
 				ABEAADAF26094092002D82F9 /* ico.png in Resources */,
 				ABEAADB526094EBF002D82F9 /* WhatsApp Image 2021-03-22 at 2.37.58 PM.jpeg in Resources */,
+				AB303A44262DF294009DDBA9 /* inspiración.png in Resources */,
 				ABEAADB026094092002D82F9 /* icos.png in Resources */,
 				ABEAADBF26095421002D82F9 /* pieOpacidad.png in Resources */,
 				ABEAAD8926094059002D82F9 /* ICO-circulo.png in Resources */,
 				ABEAAD8E26094059002D82F9 /* ICO-huerto.png in Resources */,
+				AB303A3A262DE6B9009DDBA9 /* user.png in Resources */,
 				AB352BEF262A8C090009F795 /* LogoEquipo.jpeg in Resources */,
 				ABEAAD9C26094079002D82F9 /* soleado.png in Resources */,
 				ABEAAD8B26094059002D82F9 /* ICO-notas.png in Resources */,

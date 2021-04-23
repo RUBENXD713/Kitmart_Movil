@@ -11,7 +11,10 @@ import Starscream
 
 class EstadoRefrijeradorViewController: UIViewController, WebSocketDelegate {
 
+    @IBOutlet weak var lbltemperatura: UILabel!
+    @IBOutlet weak var view1: UIView!
     @IBOutlet weak var lblEstado: UILabel!
+    
     private var isConnected = false
     private var socket:WebSocket!
     private var topic:String? = nil
@@ -25,17 +28,34 @@ class EstadoRefrijeradorViewController: UIViewController, WebSocketDelegate {
         "Accept":"aplication/json"
     ]
     
-    let url = "\(UserDefaults.standard.object(forKey: "url")!)estado"
+    let url = "\(UserDefaults.standard.object(forKey: "url")!)estadoRefri"
+    let urlTemp = "\(UserDefaults.standard.object(forKey: "url")!)temperaturaRefri"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view1.roundSuave()
         recuperarHumedad()
         wsconnect()
-        event("controlEspacios", data: "actualizar_plantas_IOS")
+        event("controlEspacios", data: "actualizar_controlEspacions_IOS")
         
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool){
+        super.viewDidLoad()
+        wsconnect()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidLoad()
+        event("controlEspacios", data: "Control espacios IOS")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool){
+        super.viewDidLoad()
         wsdisconnect()
     }
     
@@ -65,8 +85,18 @@ class EstadoRefrijeradorViewController: UIViewController, WebSocketDelegate {
             else{
                 self.lblEstado.text = "close"
             }
+        }
+        AF.request(self.urlTemp, method: .get,headers: self.headers).responseDecodable(of: [registroFinalSensor].self){ (response) in
+            guard let temperatura = response.value else { return }
+            print(temperatura)
             
-            
+            if temperatura[0].valor != nil
+            {
+                self.lbltemperatura.text = "\(temperatura[0].valor)º"
+            }
+            else{
+                self.lbltemperatura.text = "0º"
+            }
         }
     }
     

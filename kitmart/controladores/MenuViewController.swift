@@ -12,8 +12,9 @@ struct registroFinalSensor:Decodable {
     let _id:String
     let sensorId:String
     let valor:String
-    let created_at:String
-    let updated_at:String
+    let fecha:String
+    //let created_at:String?
+    //let updated_at:String?
 }
 
 class MenuViewController: UIViewController, WebSocketDelegate{
@@ -69,7 +70,12 @@ class MenuViewController: UIViewController, WebSocketDelegate{
     func recuperarTemperatura(){
         AF.request(url, method: .get,headers: headers).responseDecodable(of: [registroFinalSensor].self){ (response) in
             guard let temperatura = response.value else { return }
-            self.lblTemperatura.text = "\(temperatura[0].valor)º"
+            if (temperatura != nil){
+                self.lblTemperatura.text = "\(temperatura[0].valor)º"
+            }else{
+                self.lblTemperatura.text = "32º"
+            }
+            
             
         }
     }

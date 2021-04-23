@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imagen.bounce()
-        defaults.setValue("http://127.0.0.1:3333/api/", forKey: "url")
-        defaults.setValue("ws://127.0.0.1:3333/adonis-ws", forKey: "WS")
+        defaults.setValue("http://192.168.1.86:3333/api/", forKey: "url")
+        defaults.setValue("ws://192.168.1.86:3333/adonis-ws", forKey: "WS")
         self.defaults.synchronize()
         let va = "\(self.defaults.object(forKey: "url") ?? "")login"
         print(va)
@@ -43,4 +43,9 @@ class ViewController: UIViewController {
 
 }
 
+    
+    
+    
+    
+    
 }

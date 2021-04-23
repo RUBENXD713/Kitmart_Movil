@@ -39,5 +39,9 @@ class AgregarPendientesViewController: UIViewController {
          }
     }
 
-  
+    @IBAction func regresar(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "pendientes", sender: nil)
+    }
+    
+    
 }

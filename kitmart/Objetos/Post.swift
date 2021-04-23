@@ -28,7 +28,9 @@ class Post: Codable {
     
     static func all(_ observable:IPost){
         let session = URLSession.shared
-        let url = URL(string: "http://127.0.0.1:3333/recetas")!
+        let url = URL(string: "\(UserDefaults.standard.object(forKey: "url") ?? "")recetas")!
+        
+        print(url)
         
         let task = session.dataTask(with: url) { data, response, error in
             if error != nil {

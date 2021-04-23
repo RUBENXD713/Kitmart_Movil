@@ -43,7 +43,7 @@ class loginViewController: UIViewController {
         if tfCorreo.text! != "" && txcontrasena.text! != "" {
                 let parametros = ["email": tfCorreo.text!,"password": txcontrasena.text!]
             AF.request("\(self.defaults.object(forKey: "url") ?? "")login"
-, method: .post,parameters: parametros,headers: headers).responseDecodable(of: User.self){ (response) in
+                       , method: .post,parameters: parametros,headers: headers).responseDecodable(of: User.self){ (response) in
                     
                 if response.value == nil {
                     self.alertDefault(with: "Error!!", andWith: "La contraseña o el correo es incorrecto")
